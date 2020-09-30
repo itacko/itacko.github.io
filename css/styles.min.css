@@ -15454,6 +15454,16 @@ a:hover {
     padding: 15px 20px;
 }
 
+.text-filled--large {
+	color: #333;
+    font-weight: 700;
+    background-color: #ff9900;
+    padding: 15px 20px;
+    font-family: Quicksand,sans-serif;
+	letter-spacing: -.050em;
+	font-size: 50px;
+}
+
 @media only screen and (min-width:768px) {
     .text-filled {
         padding: 30px 40px 34px 40px;
@@ -15466,6 +15476,7 @@ a:hover {
         padding: 61px 70px 65px 70px;
     }
 }
+
 
 .ordered-list,.unordered-list {
     padding: 0;
@@ -15633,11 +15644,19 @@ a:hover {
     padding: 50px 0;
 }
 
+.cta-block__black {
+    background: #000000;
+	text-align: center;
+	
+}
+
 @media only screen and (min-width:992px) {
     .cta-block {
         padding: 65px 0;
     }
 }
+
+
 
 .cta-block__title {
     text-transform: uppercase;
@@ -22984,4 +23003,45 @@ section.instagram {
 .footer--front_5 .socials__link {
     font-size: 20px;
 }
-/*# sourceMappingURL=styles.min.css.map */
+
+#player {
+	margin: 0 0;
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.col-lg-8 {
+  width: 50%;
+  margin: 0 auto;	
+}
+
+
+#player2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;	
+}
+
+.cta-block__black {
+	
+}
+
+.cta_block__50 {
+	width: 50%;
+	margin: 0px auto;
+	
+}
