@@ -1,346 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8"/>
-		<meta name="description" content="description"/>
-		<meta name="keywords" content="keywords"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-		<title>Morty</title>
-		<link rel="stylesheet" href="css/styles.min.css"/>
-		<script>
-			WebFontConfig = {
 
-				google: {
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="description" />
+    <meta name="keywords" content="keywords" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Morty</title>
+    <link rel="stylesheet" href="css/styles.min.css" />
 
-					families: ['Nunito+Sans:300,400,500,700,900', 'Quicksand:300,400,500,700'],
+    <link rel="icon" href="img/icon.png">
+    <script>
+        WebFontConfig = {
+        
+        				google: {
+        
+        					families: ['Nunito+Sans:300,400,500,700,900', 'Quicksand:300,400,500,700'],
+        
+        				}
+        
+        			}
+        
+        			function font() {
+        
+        				var wf = document.createElement('script')
+        
+        				wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'
+        				wf.type = 'text/javascript'
+        				wf.async = 'true'
+        
+        				var s = document.getElementsByTagName('script')[0]
+        
+        				s.parentNode.insertBefore(wf, s)
+        
+        			}
+        
+        			font()
+    </script>
+</head>
 
-				}
-
-			}
-
-			function font() {
-
-				var wf = document.createElement('script')
-
-				wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'
-				wf.type = 'text/javascript'
-				wf.async = 'true'
-
-				var s = document.getElementsByTagName('script')[0]
-
-				s.parentNode.insertBefore(wf, s)
-
-			}
-
-			font()
-		</script>
-	</head>
-	<body>
-		<div class="page-wrapper">
-			<div class="menu-dropdown">
-				<div class="menu-dropdown__inner" data-value="start">
-					<div class="screen screen--start">
-						<div class="screen__item" data-category="home">
-							<span>Home</span>
-							<span>
+<body>
+    <div class="page-wrapper">
+        <div class="menu-dropdown">
+            <div class="menu-dropdown__inner" data-value="start">
+                <div class="screen screen--start">
+                    <div class="screen__item" data-category="home">
+                        <span>Home</span>
+                        <span>
 								<svg class="icon">
 									<use xlink:href="#chevron"></use>
 								</svg>
 							</span>
-						</div>
-						<div class="screen__item screen--trigger item--active" data-category="pages">
-							<span>SOMETIMES</span>
-							<span>
+                    </div>
+                    <div class="screen__item screen--trigger item--active" data-category="pages">
+                        <span>SOMETIMES</span>
+                        <span>
 								<svg class="icon">
 									<use xlink:href="#chevron"></use>
 								</svg>
 							</span>
-						</div>
-						<div class="screen__item">
-							<a class="screen__link" href="timeline.html">TIMELINE</a>
-						</div>
-					</div>
-				</div>
-				<div class="menu-dropdown__inner" data-value="home">
-					<div class="screen screen--sub">
-						<div class="screen__heading">
-							<h6 class="screen__back">
-								<svg class="icon">
+                    </div>
+                    <div class="screen__item">
+                        <a class="screen__link" href="timeline.html">TIMELINE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-dropdown__inner" data-value="home">
+                <div class="screen screen--sub">
+                    <div class="screen__heading">
+                        <h6 class="screen__back">
+                            <svg class="icon">
 									<use xlink:href="#chevron-left"></use>
 								</svg>
-								<span>Home</span>
-							</h6>
-						</div>
-					</div>
-				</div>
-				<div class="menu-dropdown__inner" data-value="pages">
-					<div class="screen screen--sub">
-						<div class="screen__heading">
-							<h6 class="screen__back">
-								<svg class="icon">
+                            <span>Home</span>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-dropdown__inner" data-value="pages">
+                <div class="screen screen--sub">
+                    <div class="screen__heading">
+                        <h6 class="screen__back">
+                            <svg class="icon">
 									<use xlink:href="#chevron-left"></use>
 								</svg>
-								<span>More</span>
-							</h6>
-						</div>
-						<div class="screen__item">
-							<a class="screen__link" href="faq.html">Faq</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<header class="header nanos-header header-f2">
-				<div class="header__top">
-					<div class="row align-items-center">
-						<div class="col-6 col-lg-4">
-							<a class="logo" href="index.html">
-								<img class="logo__img" src="img/logo_nanos_black.png" alt="logo"/>
-							</a>
-						</div>
-						<div class="col-6 col-lg-8 d-flex justify-content-end">
-							<ul class="main-menu">
-								<li class="main-menu__item main-menu__item">
-									<a class="main-menu__link" href="javascript:void(0);">
-										<span>Home</span>
-									</a>
-								</li>
-								<li class="main-menu__item main-menu__item--has-child main-menu__item">
-									<a class="main-menu__link" href="javascript:void(0);">
-										<span>SOMETIMES</span>
-									</a>
-									<ul class="main-menu__sub-list sub-list--style-2">
-										<li>
-											<a href="timeline.html">
-												<span>Yup</span>
-											</a>
-										</li>
-										<li>
-											<a href="timeline.html">
-												<span>Nop</span>
-											</a>
-										</li>
-										<li>
-											<a href="timeline.html">
-												<span>Dap</span>
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li class="main-menu__item main-menu__item">
-									<a class="main-menu__link" href="timeline.html">
-										<span>Timeline</span>
-									</a>
-								</li>
-								<li class="main-menu__item">
-									<a class="main-menu__link" href="corona.html">
-										<span>Coronavirus</span>
-									</a>
-								</li>
-								<li class="main-menu__item main-menu__item--active">
-									<a class="main-menu__link" href="morty.html">
-										<span>Morty</span>
-									</a>
-								</li>
-								<span style="height:10px;width:140px"></span>
-							</ul>
-							<a class="col-6 col-lg-4" href="#"></a>
-							<div class="hamburger">
-								<div class="hamburger-box">
-									<div class="hamburger-inner"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="header__lower">
-					<div class="row"></div>
-				</div>
-			</header>
-			<main class="main">
-				<section class="primary">
-					<picture>
-						<source srcset="img/nano_1.jpg" media="(min-width: 992px)"/>
-						<img class="img--bg" src="img/nano_structure-992.jpg" alt="img"/>
-					</picture>
-					<div class="container">
-						<div class="row">
-							<div class="col-auto">
-								<div class="align-container">
-									<div class="align-container__item">
-										<h7>nanos</h7>
-										<h1 class="primary__title--here">
-											<span>Sometimes</span>
-											<span>Here</span>
-											<h1 class="primary__title">
-												<span>Sometimes</span>
-												<span>There</span>
-											</h1>
-										</h1>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<div class="cta-block">
-					<div class="container">
-						<div class="row align-items-center">
-							<div class="col-lg-8">
-								<div class="text-center">
-									<h2>Morty</h2>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="cta-block__black">
-					<div class="cta_block__50">
-						<div class="video-container">
-							<div id="player"></div>
-						</div>
-					</div>				
-				</div>			
-				<script>
-				
-				            // 1. This code loads the IFrame Player API code asynchronously.
-				            var tag = document.createElement('script');
-				
-				            tag.src = "https://www.youtube.com/iframe_api";
-				            var firstScriptTag = document.getElementsByTagName('script')[0];
-				            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-				
-				            // 2. This function creates an <iframe> (and YouTube player)
-				            //    after the API code downloads.
-				            var player;
-				            var player2;
-				            function onYouTubeIframeAPIReady() {
-				            player = new YT.Player('player', {
-				              
-				              height: '100%',
-				              width: '50%',
-				              playerVars: {
-				                  autoplay: 1,
-				                  loop: 1,
-				                  controls: 0,
-				                  showinfo: 0,
-				                  autohide: 1,
-				                  modestbranding: 1,
-				                  hd: 1},
-				              videoId: 'MqutTnh0ZGY',
-				              events: {
-				              'onReady': onPlayerReady,
-				              'onStateChange': onPlayerStateChange
-				              }
-				            });
-				            player2 = new YT.Player('player2', {
-				              
-				              height: '100%',
-				              width: '50%',
-				              playerVars: {
-				                  autoplay: 0,
-				                  loop: 1,
-				                  controls: 0,
-				                  showinfo: 0,
-				                  autohide: 1,
-				                  modestbranding: 1,
-				                  hd: 1},
-				              videoId: 'W5EWM850ilg',
-				              events: {
-				              'onReady': onPlayerReady,
-				              'onStateChange': onPlayerStateChange
-				              }
-				            });
-				            }
-				
-				            // 3. The API will call this function when the video player is ready.
-				            function onPlayerReady(event) {
-				            event.target.playVideo();
-				            }
-				
-				            var done = false;
-				            function onPlayerStateChange(event) {
-				
-				            }
-				            function stopVideo() {
-				            player.stopVideo();
-				            }
-				          
-									
-					</script>
-				
-				<section class="section typo padding-top: 35px">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
-								<div class="text-center">
-									<p class="text-filled--large">How?</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<div class="cta-block__black">
-					<div class="cta_block__50">
-						<div class="video-container">
-							<div id="player2"></div>
-						</div>
-					</div>				
-				</div>
-				<section class="section typo">
-					<div class="container">
-						
-						<div class="row">
-							<div class="col-12">
-								<div class="dropcap">
-									<div class="row">
-							<div class="col-md-6 col-lg-6" style="padding-left:40px">
-								<ol class="unordered-list">
-									<li>Ovdje je uglavnom kod buduci da je obrada videa prikazana na <a href="https://itacko.github.io/corona.html">Corona</a></li>
-								</ol>
-							</div>
-						</div>
-								
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="section typo padding-top: 35px"></section>
-			</main>
-			<footer class="footer">
-				<img class="footer__bg img--bg" src="img/background_1.png" alt="bg"/>
-				<div class="container">
-					<div class="row bottom-50">
-						<div class="col-md-5 col-xl-4 text-center text-md-left">
-							<a class="logo logo--footer" href="index.html">
-								<img class="logo__img" src="img/logo_nanos_white.png
-							" alt="logo"/>
-							</a>
-						</div>
-						<div class="col-md-7 col-xl-5 d-none d-md-block">
-							<h6 class="footer__title">Clicky</h6>
-							<ul class="footer-menu">
-								<li class="footer-menu__item">
-									<a class="footer-menu__link" href="#">Home</a>
-								</li>
-								<li class="footer-menu__item">
-									<a class="footer-menu__link" href="#">Timeline</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</footer>
-		</div>
-		<script src="js/jquery.min.js"></script>
-		<script src="js/libs.min.js"></script>
-		<script src="js/common.js"></script>
-		<div style="display: none">
-			<?xml version="1.0" encoding="utf-8"?>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <span>More</span>
+                        </h6>
+                    </div>
+                    <div class="screen__item">
+                        <a class="screen__link" href="faq.html">Faq</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="header nanos-header header-f2">
+            <div class="header__top">
+                <div class="row align-items-center">
+                    <div class="col-6 col-lg-4">
+                        <a class="logo" href="index.html">
+                            <img class="logo__img" src="img/logo_nanos_black.png" alt="logo" />
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-8 d-flex justify-content-end">
+                        <ul class="main-menu">
+                            <li class="main-menu__item main-menu__item">
+                                <a class="main-menu__link" href="javascript:void(0);">
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li class="main-menu__item main-menu__item--has-child main-menu__item">
+                                <a class="main-menu__link" href="javascript:void(0);">
+                                    <span>SOMETIMES</span>
+                                </a>
+                                <ul class="main-menu__sub-list sub-list--style-2">
+                                    <li>
+                                        <a href="timeline.html">
+                                            <span>Yup</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="timeline.html">
+                                            <span>Nop</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="timeline.html">
+                                            <span>Dap</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="main-menu__item main-menu__item">
+                                <a class="main-menu__link" href="timeline.html">
+                                    <span>Timeline</span>
+                                </a>
+                            </li>
+                            <li class="main-menu__item">
+                                <a class="main-menu__link" href="corona.html">
+                                    <span>Coronavirus</span>
+                                </a>
+                            </li>
+                            <li class="main-menu__item main-menu__item--active">
+                                <a class="main-menu__link" href="morty.html">
+                                    <span>Morty</span>
+                                </a>
+                            </li>
+                            <li class="main-menu__item main-menu__item">
+                                <a class="main-menu__link" href="plitvice.html">
+                                    <span>Plitvice</span>
+                                </a>
+                            </li>
+							<li class="main-menu__item main-menu__item">
+                                <a class="main-menu__link" href="slike.html">
+                                    <span>Slike</span>
+                                </a>
+                            </li>
+                            <span style="height:10px;width:140px"></span>
+                        </ul>
+                        <a class="col-6 col-lg-4" href="#"></a>
+                        <div class="hamburger">
+                            <div class="hamburger-box">
+                                <div class="hamburger-inner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__lower">
+                <div class="row"></div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="primary">
+                <picture>
+                    <source srcset="img/nano_1.jpg" media="(min-width: 992px)" />
+                    <img class="img--bg" src="img/nano_structure-992.jpg" alt="img" />
+                </picture>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-auto">
+                            <div class="align-container">
+                                <div class="align-container__item">
+                                    <h7>nanos</h7>
+                                    <h1 class="primary__title--here">
+                                        <span>Sometimes</span>
+                                        <span>Here</span>
+                                        <h1 class="primary__title">
+                                            <span>Sometimes</span>
+                                            <span>There</span>
+                                        </h1>
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="cta-block">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <div class="text-center">
+                                <h2>Morty</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-block__black">
+                <div class="cta_block__50">
+                    <div class="video-container">
+                        <div id="player"></div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                // 1. This code loads the IFrame Player API code asynchronously.
+    				            var tag = document.createElement('script');
+    				
+    				            tag.src = "https://www.youtube.com/iframe_api";
+    				            var firstScriptTag = document.getElementsByTagName('script')[0];
+    				            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    				
+    				            // 2. This function creates an <iframe> (and YouTube player)
+    				            //    after the API code downloads.
+    				            var player;
+    				            var player2;
+    				            function onYouTubeIframeAPIReady() {
+    				            player = new YT.Player('player', {
+    				              
+    				              height: '100%',
+    				              width: '50%',
+    				              playerVars: {
+    				                  autoplay: 1,
+    				                  loop: 1,
+    				                  controls: 0,
+    				                  showinfo: 0,
+    				                  autohide: 1,
+    				                  modestbranding: 1,
+    				                  hd: 1},
+    				              videoId: 'MqutTnh0ZGY',
+    				              events: {
+    				              'onReady': onPlayerReady,
+    				              'onStateChange': onPlayerStateChange
+    				              }
+    				            });
+    				            player2 = new YT.Player('player2', {
+    				              
+    				              height: '100%',
+    				              width: '50%',
+    				              playerVars: {
+    				                  autoplay: 0,
+    				                  loop: 1,
+    				                  controls: 0,
+    				                  showinfo: 0,
+    				                  autohide: 1,
+    				                  modestbranding: 1,
+    				                  hd: 1},
+    				              videoId: 'W5EWM850ilg',
+    				              events: {
+    				              'onReady': onPlayerReady,
+    				              'onStateChange': onPlayerStateChange
+    				              }
+    				            });
+    				            }
+    				
+    				            // 3. The API will call this function when the video player is ready.
+    				            function onPlayerReady(event) {
+    				            event.target.playVideo();
+    				            }
+    				
+    				            var done = false;
+    				            function onPlayerStateChange(event) {
+    				
+    				            }
+    				            function stopVideo() {
+    				            player.stopVideo();
+    				            }
+            </script>
+
+            <section class="section typo padding-top: 35px">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="text-center">
+                                <p class="text-filled--large">How?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="cta-block__black">
+                <div class="cta_block__50">
+                    <div class="video-container">
+                        <div id="player2"></div>
+                    </div>
+                </div>
+            </div>
+            <section class="section typo">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="dropcap">
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-6" style="padding-left:40px">
+                                        <ol class="unordered-list">
+                                            <li>Ovdje je uglavnom kod buduci da je obrada videa prikazana na <a href="https://itacko.github.io/corona.html">Corona</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section typo padding-top: 35px"></section>
+        </main>
+        <footer class="footer">
+            <img class="footer__bg img--bg" src="img/background_1.png" alt="bg" />
+            <div class="container">
+                <div class="row bottom-50">
+                    <div class="col-md-5 col-xl-4 text-center text-md-left">
+                        <a class="logo logo--footer" href="index.html">
+                            <img class="logo__img" src="img/logo_nanos_white.png
+							" alt="logo" />
+                        </a>
+                    </div>
+                    <div class="col-md-7 col-xl-5 d-none d-md-block">
+                        <h6 class="footer__title">Clicky</h6>
+                        <ul class="footer-menu">
+                            <li class="footer-menu__item">
+                                <a class="footer-menu__link" href="#">Home</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu__link" href="#">Timeline</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/common.js"></script>
+    <div style="display: none">
+        <?xml version="1.0" encoding="utf-8"?>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 				<symbol viewBox="0 0 488.147 512" id="adult"
 					xmlns="http://www.w3.org/2000/svg">
 					<path d="M195.158 313.802c-4.247-1.762-8.031-.014-10.889 5.176-5.845 10.617-14.613 16.669-26.881 16.933-14.445.311-24.873-5.948-30.818-19.357-2.512-5.666-6.885-7.609-11.486-5.41-4.237 2.025-5.489 6.7-3.077 12.047 2.134 4.73 4.853 9.099 8.814 12.918 2.162 2.667 4.999 4.978 8.017 7.068 27.96 19.362 59.177 3.654 69.801-17.197 2.711-5.32 1.278-10.204-3.481-12.178z"/>
@@ -629,6 +638,7 @@
 					<path d="M275.2 243.2c-8-8-18.8-12.8-30.8-12.8H131.2c-5.6 0-10.4 4.4-10.4 10.4s4.4 10.4 10.4 10.4h113.2c6.4 0 12 2.4 16 6.8 4 4 6.8 10 6.8 16 0 6.4-2.4 12-6.8 16-4 4.4-10 6.8-16 6.8-6.4 0-12-2.4-16-6.8-4-4-6.8-10-6.8-16 0-5.6-4.8-10.4-10.4-10.4-5.6 0-10.4 4.8-10.4 10.4 0 12 4.8 22.8 12.8 30.8s18.8 12.8 30.8 12.8 22.8-4.8 30.8-12.8S288 286 288 274s-4.8-22.8-12.8-30.8zM306 90c-14-14-33.6-22.8-55.2-22.8-2 0-4.4 0-6.4.4-7.6-16-18.8-29.2-32.8-38.8-16-11.2-35.6-17.6-56-17.6-24.4 0-46.8 8.8-64 23.6C76.4 48 65.2 65.6 60 86.4c-15.6 2-29.6 9.2-40 19.6-12.4 12.4-20 29.6-20 48.4s7.6 36 20 48.4c12.4 12.8 29.6 20.4 48.8 20.4h182c21.6 0 40.8-8.8 55.2-22.8 14-14 22.8-33.6 22.8-55.2S320 104.4 306 90zm-16 96c-10.4 10.4-24.8 16.8-40.4 16.8H68.8c-13.2 0-25.2-5.2-34-14s-14-20.8-14-34c0-13.6 5.2-25.6 14-34 8.8-8.8 20.8-14 34-14 1.6 0 3.6-.4 4.8-1.2 2.4-1.6 4-4 4.4-6.8 2.8-18.8 12.4-35.6 26-47.2 13.6-11.6 31.6-18.8 50.8-18.8 16.4 0 31.6 5.2 44.4 14 9.6 6.8 18 15.6 23.6 26.4-1.6.8-3.2 1.2-4.8 2-10 4.4-18.8 11.2-26.4 19.2-3.6 4.4-3.2 10.8.8 14.4 4.4 3.6 10.8 3.2 14.4-.8 5.6-6 12-10.8 19.2-14.4 7.2-3.2 15.2-5.2 23.6-5.2 16 0 30 6.4 40.4 16.8 10.4 10.4 16.8 24.8 16.8 40.4 0 16-6.4 30-16.8 40.4z"/>
 				</symbol>
 			</svg>
-		</div>
-	</body>
+    </div>
+</body>
+
 </html>
