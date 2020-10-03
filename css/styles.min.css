@@ -15464,6 +15464,18 @@ a:hover {
 	font-size: 50px;
 }
 
+.text-filled--large__grad {
+	color: #333;
+    font-weight: 700;
+    background: linear-gradient(-45deg, #ff9900, #30e3ca);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+    padding: 15px 20px;
+    font-family: Quicksand,sans-serif;
+	letter-spacing: -.050em;
+	font-size: 50px;
+}
+
 @media only screen and (min-width:768px) {
     .text-filled {
         padding: 30px 40px 34px 40px;
@@ -15642,6 +15654,25 @@ a:hover {
     position: relative;
     background: #ff9900;
     padding: 50px 0;
+}
+.cta-block__gradient {
+	position: relative;
+    background: linear-gradient(-45deg, #ff9900, #30e3ca);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+	padding: 50px 0;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .cta-block__black {
