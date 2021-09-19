@@ -114,7 +114,7 @@
                                     <span>Slike</span>
                                 </a>
                             </li>
-                            <span style="height:10px;width:140px"></span>
+                            <span style="height:10px;width:1vw"></span>
                         </ul>
                         <a class="col-6 col-lg-4" href="#"></a>
                         <div class="hamburger">
@@ -131,7 +131,9 @@
             </div>
         </header>
         <main class="main">
+                <div id="ambient" style="overflow:hidden; position:absolute; width:100%; height:100%;"></div>
             <section class="primary">
+
                 <picture>
                     <source srcset="img/nano_1.jpg" media="(min-width: 992px)" /><img class="img--bg" src="img/nano_structure-992.jpg" alt="img" />
                 </picture>
@@ -187,52 +189,6 @@
                     </div>
                 </div>
             </section>
-            <script>
-                // 1. This code loads the IFrame Player API code asynchronously.
-    				            var tag = document.createElement('script');
-    				
-    				            tag.src = "https://www.youtube.com/iframe_api";
-    				            var firstScriptTag = document.getElementsByTagName('script')[0];
-    				            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    				
-    				            // 2. This function creates an <iframe> (and YouTube player)
-    				            //    after the API code downloads.
-    				            var player;
-    				            function onYouTubeIframeAPIReady() {
-    				            player = new YT.Player('player', {
-    				              
-    				              height: '100%',
-    				              width: '50%',
-    				              playerVars: {
-    				                  autoplay: 1,
-    				                  loop: 1,
-    				                  controls: 0,
-    				                  showinfo: 0,
-    				                  autohide: 1,
-    				                  modestbranding: 1,
-    				                  hd: 1},
-    				              videoId: 'KNIjxd_rifk',
-    				              events: {
-    				              'onReady': onPlayerReady,
-    				              'onStateChange': onPlayerStateChange
-    				              }
-    				            });
-    				            }
-    				
-    				            // 3. The API will call this function when the video player is ready.
-    				            function onPlayerReady(event) {
-    				            event.target.playVideo();
-    				            }
-    				
-    				            var done = false;
-    				            function onPlayerStateChange(event) {
-    				
-    				            }
-    				            function stopVideo() {
-    				            player.stopVideo();
-    				            }
-            </script>
-
             <section class="section typo padding-top: 35px">
                 <div class="container">
                     <div class="row">
@@ -278,5 +234,86 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/common.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+          var demo1 = new BVAmbient({
+            selector: "#ambient",
+            fps: 60,
+            max_transition_speed: 12000,
+            min_transition_speed: 8000,
+            particle_number: 30,
+            particle_maxwidth: 60,
+            particle_minwidth: 10,
+            particle_radius: 50,
+            particle_opacity: true,
+            particle_colision_change: true,
+            particle_background: "#ff9900",
+            refresh_onfocus: true,
+            particle_image: {
+              image: false,
+              src: ""
+            },
+            responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    particle_number: "15"
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    particle_number: "10"
+                  }
+                }
+            ]
+          });
+    });
+    </script>
+            <script>
+                // 1. This code loads the IFrame Player API code asynchronously.
+                var tag = document.createElement('script');
+    
+                tag.src = "https://www.youtube.com/iframe_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+                // 2. This function creates an <iframe> (and YouTube player)
+                //    after the API code downloads.
+                var player;
+                function onYouTubeIframeAPIReady() {
+                player = new YT.Player('player', {
+                  
+                  height: '100%',
+                  width: '50%',
+                  playerVars: {
+                      autoplay: 1,
+                      loop: 1,
+                      controls: 0,
+                      showinfo: 0,
+                      autohide: 1,
+                      modestbranding: 1,
+                      hd: 1},
+                  videoId: 'KNIjxd_rifk',
+                  events: {
+                  'onReady': onPlayerReady,
+                  'onStateChange': onPlayerStateChange
+                  }
+                });
+                }
+    
+                // 3. The API will call this function when the video player is ready.
+                function onPlayerReady(event) {
+                event.target.playVideo();
+                }
+    
+                var done = false;
+                function onPlayerStateChange(event) {
+    
+                }
+                function stopVideo() {
+                player.stopVideo();
+                }
+            </script>
 	</body>
 </html>
