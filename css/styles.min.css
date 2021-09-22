@@ -12101,6 +12101,12 @@ section.section {
 	max-width: 100%;
 }
 
+.img-indesign {
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 3;
+}
+
 .img-box {
 	position: relative;
 }
@@ -22367,6 +22373,8 @@ section.shop {
 	visibility: visible;
 }
 
+
+
 .info-block::before {
 	content: "";
 	display: block;
@@ -23087,6 +23095,14 @@ section.instagram {
 	height: 100%;
 	border: 0;
 }
+#player3 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
 
 .video-container {
 	position: relative;
@@ -23460,4 +23476,19 @@ section.instagram {
 	position: absolute;
 	pointer-events: none;
 	transition: top linear, left linear;
+}
+
+.separator-block {
+  width: 100%;
+  height: 500px;
+}
+
+.separator-img {
+  background-image: url("../img/separator-01.png");
+  background-position: center;
+  z-index: 1;
+  position: absolute;
+  height: 500px;
+  background-size: cover;
+  width: 100%;
 }
